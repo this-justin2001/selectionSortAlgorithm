@@ -1,0 +1,16 @@
+//Think of this algorithm as a blank template. You will need to adjust this based on your specific program to function properly.
+public static void selectSort(ArrayList<Object> objectArr) {
+		for (int i = 0; i < objectArr.size(); i++) { //Iterates through the list, calles the .size() method to iterate until it reaches the end of the list. 
+			
+			int position = i; //this loop finds the smallest value in the unsorted array
+			for(int j = i; j < objectArr.size(); j++) { 
+				if(objectArr.get(j) < objectArr.get(position)) 
+					position = j; 
+			}
+			//Below lines, except the print Method, swaps the samllest value with the first.
+			int minimum = objectArr.get(position); 
+			objectArr.set(position,objectArr.get(i));
+			objectArr.set(i, minimum);
+			printArray(i + 1,objectArr); //prints finished array
+	}
+}
